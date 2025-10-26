@@ -55,18 +55,22 @@ function toggleNext(){
     // prevent out of range exception
     if(currentIndex < flashcards.length-1){
         currentIndex++;
-        showingTerm = true;
-        displayCard();
+    } else{
+        currentIndex = 0;
     }
+    showingTerm = true;
+    displayCard();
 }
 // listener on prevTerm
 function togglePrev(){
     // prevent out of range exception
     if(currentIndex > 0){
         currentIndex--;
-        showingTerm = true;
-        displayCard();
+    } else{
+        currentIndex = flashcards.length - 1;
     }
+    showingTerm = true;
+    displayCard();
 }
 
 
